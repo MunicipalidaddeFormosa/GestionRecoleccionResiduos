@@ -44,7 +44,7 @@ class ControladorGestor{
 	
 	public function CtrDatosUsu($usu){
 
-		/* pasa el parametro $tabla al modelo  ModelosSeguimientoExpedientes::mdlDatosUsu($usu)*/
+		/* pasa el parametro $usu al modelo  ModelosSeguimientoExpedientes::mdlDatosUsu($usu)*/
 
 		$rta= ModeloGestor::mdlDatosUsu($usu);
 

@@ -14,7 +14,7 @@ if (isset($_POST)) {
 		if ($ContibuDatos->execute()) {
 			$RTA = $ContibuDatos->fetchAll();
 			if (empty($RTA)) { ?>
-				<label class="UsuarioNOexiste text-danger">USUARIO NO EXISTE</label>
+				<label class="UsuarioNOexiste text-danger">USUARIO NO EXISTE</label> 
 				<?php } else {
 				foreach ($RTA as $key => $value) { ?>
 					<label class="text-success"><?php echo $value['nombre'] ?></label>

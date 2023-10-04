@@ -69,6 +69,6 @@ class ModeloGestor{
 
 		$stmt->close();
 
-		$stmt = null; 
+		$stmt = null;  
 	}
 }

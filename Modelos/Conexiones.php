@@ -2,7 +2,7 @@
 class Conexiones
 {
 		// CONEXIÓN A LA BASE DE DATOS CON FUNCION DE MunicipalidadDigital
-		public function conMunicipalidadDigital(){
+		public function conMunicipalidadDigital(){ 
 			
 			$usuario = "racosta";
 			$contraseña = "38577190Ra";

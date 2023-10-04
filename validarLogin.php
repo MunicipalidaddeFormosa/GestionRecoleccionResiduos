@@ -37,8 +37,8 @@
 					$respuesta = ControladorGestor::CtrDatosUsu($usu);
 					print_r($respuesta);
 					if(isset($respuesta[0]["codusu"])){
-					// 	// //Si los datos coinciden, se crea una sesión para el usuario
-					// 	// //Comienza la sesión
+					// Si los datos coinciden, se crea una sesión para el usuario
+					// Comienza la sesión
 						session_start();
 
 						//defino la sesión que demuestra que el usuario está autorizado
@@ -46,7 +46,7 @@
 						$hora = ModeloGestor::mdlFecha();
 
 						$fechaConexion=date('m-d-Y H:i:s',strtotime($hora[0][0]));
-						// //Se crean las variables de la sesión
+						// Se crean las variables de la sesión
 						$_SESSION["ultimoAcceso"]= $fechaConexion;
 						//defino la fecha y hora de inicio de sesión en formato aaaa-mm-dd hh:mm:ss
 						$_SESSION['nombre1'] = $respuesta[0]["nombre"];
@@ -57,7 +57,6 @@
 						//Redirecciona a la página principal
 						header("Location:index.php");
 					}else{
-						// ECHO "error";
 						echo "<script>	
 								jQuery(function(){
 									Swal.fire({
