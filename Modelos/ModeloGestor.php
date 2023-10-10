@@ -57,11 +57,12 @@ class ModeloGestor{
 
 		$consultaFecha ->close();
 	}
-    public function mdlDatosUsu($usu){
+    public function mdlDatosUsu($usu, $modulo){ 
 			
-		$stmt = Conexiones::conMunicipalidadDigital()->prepare("EXECUTE [MunicipalidadDigital].[dbo].[Usuarios2_Datos] ?");
+		$stmt = Conexiones::conMunicipalidadDigital()->prepare("EXECUTE [MunicipalidadDigital].[dbo].[Usuarios2_Datos] ?,?");
 
 		$stmt->bindParam(1, $usu, PDO::PARAM_INT);
+		$stmt->bindParam(2, $modulo, PDO::PARAM_INT);
 		
 		$stmt->execute();
 
