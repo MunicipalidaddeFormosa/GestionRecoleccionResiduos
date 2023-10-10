@@ -32,7 +32,6 @@
 		$pass = $_POST['clave'];
 
 		$logueoRta = ControladorGestor::CtrIngresoUsu($usu,"$pass");
-			print_r($logueoRta);
 				if($logueoRta['rta']=='OK'){
 					$respuesta = ControladorGestor::CtrDatosUsu($usu);
 					print_r($respuesta);
@@ -53,9 +52,12 @@
 						$_SESSION['codusu1'] = $respuesta[0]["codusu"];
 						$_SESSION['Dependencia1'] = $respuesta[0]["Dependencia"];
 						$_SESSION['Detalle1'] = $respuesta[0]["Detalle"];
+
+						//niveles de usuarios:  1-ADMINISTRADOR || 2-SUPERVISOR || 3-OPERADOR
+ 						$_SESSION['nivel'] = $respuesta[0]["nivel"];
 						$_SESSION['validarIngreso'] = "ok";
 						//Redirecciona a la página principal
-						header("Location:index.php");
+						header("Location:./listaDescargas"); 
 					}else{
 						echo "<script>	
 								jQuery(function(){
@@ -99,7 +101,7 @@
 									})
 							});
 						</script>";
-				}
+				} //$logueoRta['rta']=='OK'
 
 }else{
 	echo "<script>	

@@ -7,10 +7,8 @@
     <title>Ingresar - Municipalidad de la Ciudad de Formosa</title>
     <link rel="shortcut icon" type="image/x-icon" style="border-radius: 50% !important" href="../Librerias/img/logoMunicipalidadFsa.png" />
     <link rel="stylesheet" href="../Librerias/Bootstrap/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="../Librerias/EstilosCSS/EstiloLogin.css"> -->
     <link rel="stylesheet" href="../Librerias/FontAwesome/css/fontawesome_v6.4.2_css_all.css">
-    <link rel="stylesheet" href="../Librerias/EstilosCSS/EstiloLogin.css">
-    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-02670e9412103b5852dcbe140d278c49.css?vsn=d">
+    <link rel="stylesheet" href="../Librerias/EstilosCSS/EstiloLogin.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -63,31 +61,31 @@
             <img src='../Librerias/img/tuciudaddigitalciudad5.png' width='100%' height='95' style="image-rendering: pixelated;" />
         </form>
         <?php
-        if (isset($_GET['SESSION_EXPIRED'])) {
-            echo "<script>  
-                            jQuery(function(){
-                                Swal.fire({
-                                icon: 'error',
-                                title: 'Su sesión expiró',
-                                text: 'Ha superado el tiempo de inactividad en el sitio',
-                                showConfirmButton: true, 
-                                confirmButtonText: 'Ok'
-                                }).then((result) => {
-                                /* Read more about isConfirmed, isDenied below */
-                                    if (result.isConfirmed) {
-                                        if(window.history.replaceState){
-                                            window.history.replaceState(null, null, window.location.href );
+            if (isset($_GET['SESSION_EXPIRED'])) {
+                echo "<script>  
+                                jQuery(function(){
+                                    Swal.fire({
+                                    icon: 'error',
+                                    title: 'Su sesión expiró',
+                                    text: 'Ha superado el tiempo de inactividad en el sitio',
+                                    showConfirmButton: true, 
+                                    confirmButtonText: 'Ok'
+                                    }).then((result) => {
+                                    /* Read more about isConfirmed, isDenied below */
+                                        if (result.isConfirmed) {
+                                            if(window.history.replaceState){
+                                                window.history.replaceState(null, null, window.location.href );
+                                            }
+                                            window.location = 'login.php';
                                         }
-                                        window.location = 'login.php';
-                                    }
-                                })
-                            });
-                        </script>";
-        }
+                                    })
+                                });
+                            </script>";
+            }
         ?>
-
-        <script rel="stylesheet" src="../Librerias/JQuery/jquery-3.7.1.min.js"></script>
-        <script rel="stylesheet" src="../Librerias/FuncionesJS/script.js"></script>
+    </div>
+    <script rel="stylesheet" src="../Librerias/JQuery/jquery-3.7.1.min.js"></script>
+    <script rel="stylesheet" src="../Librerias/FuncionesJS/script.js"></script>
 
 </body>
 
