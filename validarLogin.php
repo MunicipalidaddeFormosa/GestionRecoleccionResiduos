@@ -32,7 +32,6 @@
 		$pass = $_POST['clave'];
 
 		$logueoRta = ControladorGestor::CtrIngresoUsu($usu,"$pass");
-			print_r($logueoRta);
 				if($logueoRta['rta']=='OK'){
 					$respuesta = ControladorGestor::CtrDatosUsu($usu);
 					print_r($respuesta);
