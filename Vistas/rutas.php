@@ -14,19 +14,23 @@ if (!isset($_SESSION['validarIngreso'])) {
 }
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingresar - Municipalidad de la Ciudad de Formosa</title>
+    <title>Sistema de Gestión de Descargas - Municipalidad de la Ciudad de Formosa</title>
     <link rel="shortcut icon" type="image/x-icon" style="border-radius: 50% !important" href="../Librerias/img/logoMunicipalidadFsa.png" />
 
     <!-- FUENTE MONTSERRAT CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="../Librerias/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../Librerias/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../Librerias/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="../Librerias/EstilosCSS/adminlte.min.css">
+    <link rel="stylesheet" href="../Librerias/EstilosCSS/Estilo.css">
     <!-- Recursos -->
 
     <link rel="stylesheet" href="../Librerias/Bootstrap/css/bootstrap.min.css">
