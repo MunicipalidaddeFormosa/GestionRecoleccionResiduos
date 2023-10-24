@@ -57,7 +57,7 @@ if (isset($_POST['username']) && isset($_POST['clave'])) {
 			$_SESSION['nivel'] = $respuesta[0]["nivel"];
 			$_SESSION['validarIngreso'] = "ok";
 			//Redirecciona a la página principal
-			header("Location:./listaDescargas");
+			header("Location:./descargasListado");
 		} else {
 			echo "<script>	
 								jQuery(function(){
