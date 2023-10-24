@@ -22,19 +22,26 @@ if (!isset($_SESSION['validarIngreso'])) {
     <title>Sistema de Gestión de Descargas - Municipalidad de la Ciudad de Formosa</title>
     <link rel="shortcut icon" type="image/x-icon" style="border-radius: 50% !important" href="../Librerias/img/logoMunicipalidadFsa.png" />
 
+
     <!-- FUENTE MONTSERRAT CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Recursos -->
+
+
+    <link rel="stylesheet" href="../Librerias/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/v4-shims.js" integrity="sha512-RNv6jlbGXQqj0vGGjx6DcZ9kf/mH7BAwssf9HRxWU15LTXJClKIgpHH/PAT6vNIWGFJQWy34oP6bCpBFlrR7dA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/solid.min.js" integrity="sha512-s6yNeC6faUgveCQocceGXVia7ciAebyTH7hRNazwZa2FHhnxX22qaGeb9d3a8PUKdnoHo3T3bYI/0ZOjmgWkNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/regular.min.js" integrity="sha512-kSAGSlODsZwG7bMv/Hydyvybjk+WOz4oEqQiWYwpCxQ7/7yXMFynr2QrvNc2myZW/7wyi0IF2TXZZWMeg8AGhw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Librerias/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../Librerias/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="../Librerias/datatables-buttons/css/buttons.bootstrap4.min.css">
     <link rel="stylesheet" href="../Librerias/EstilosCSS/adminlte.min.css">
     <link rel="stylesheet" href="../Librerias/EstilosCSS/Estilo.css">
-    <!-- Recursos -->
-
-    <link rel="stylesheet" href="../Librerias/Bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Librerias/FontAwesome/css/fontawesome_v6.4.2_css_all.css">
     <link rel="stylesheet" href="../Librerias/Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Librerias/EstilosCSS/Rutas.css">
     <link rel="stylesheet" href="../Librerias/EstilosCSS/EstilosGenerales.css">
@@ -55,11 +62,10 @@ if (!isset($_SESSION['validarIngreso'])) {
     <!-- INICIO NAV -->
     <section class="container-fluid">
         <!-- menu asadasd<?php echo $_SESSION['nivel'] ?> -->
-
         <div class="row" id="Ajuste">
             <div class="col-md-2 p-0">
-                <nav class="navbar navbar-expand-lg navbar-dark navV" id="navV">
-                    <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg p-0 navbar-dark navV" id="navV">
+                    <div class="container-fluid p-2">
 
                         <a class="navbar-brand fw-bold lh-1 mt-2 titleVMunicipalidad" style="display: none;">Municipalidad Digital</a>
                         <span class="navbar-brand fs-6 lh-sm titleVGestion" style="display: none;">Gestion Ambiental</span>
@@ -125,7 +131,7 @@ if (!isset($_SESSION['validarIngreso'])) {
                     </div>
                 </nav>
             </div>
-            <div class="col-md-9" id="Ajuste">
+            <div class="col-md-9 p-2" id="Ajuste">
 
                 <?php
 
@@ -165,8 +171,25 @@ if (!isset($_SESSION['validarIngreso'])) {
     </footer> -->
     <!-- <script src="Librerias/js/Bootstrap5/bootstrap.bundle.min.js"></script> -->
     <!-- <script src="Librerias/js/Scripts/script.js"></script> -->
-    <script src="../Librerias/JQuery/jquery-3.7.1.min.js"></script>
+    <!-- jQuery -->
+    <script src="../Librerias/JQuery/jquery.min.js"></script>
+    <!-- Libreria de Bootstrap-->
     <script src="../Librerias/Bootstrap/js/bootstrap.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="../Librerias/datatables/jquery.dataTables.min.js"></script>
+    <script src="../Librerias/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../Librerias/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../Librerias/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../Librerias/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../Librerias/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../Librerias/jszip/jszip.min.js"></script>
+    <script src="../Librerias/pdfmake/pdfmake.min.js"></script>
+    <script src="../Librerias/pdfmake/vfs_fonts.js"></script>
+    <script src="../Librerias/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../Librerias/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../Librerias/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Scripts personalizados -->
+    <script src="../Librerias/FuncionesJS/script.js"></script>
     <script src="../Librerias/FuncionesJS/RutasJS.js"></script>
 
     <script type="text/javascript">
