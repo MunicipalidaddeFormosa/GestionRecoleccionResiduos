@@ -177,7 +177,13 @@ if (!isset($_SESSION['validarIngreso'])) {
                     $_GET['pagina'] == ""
                 ) {
                     include_once "Vistas/Cooperativas/" . $_GET['pagina'] . ".php";
-                } else {
+                } 
+                else if (
+                    $_GET['pagina'] == "camionesListado" ||
+                    $_GET['pagina'] == ""
+                ) {
+                    include_once "Vistas/camiones/" . $_GET['pagina'] . ".php";
+                }else {
                     include_once "Vistas/error404.php";
                 }
             } else {
@@ -228,40 +234,6 @@ if (!isset($_SESSION['validarIngreso'])) {
     <script src="../Librerias/FuncionesJS/script.js"></script>
     <script src="../Librerias/FuncionesJS/RutasJS.js"></script>
 
-    <script type="text/javascript">
-        // $(document).ready(function() {
-        //     var height = $(window).height();
-        //     var width = $(window).width();
-
-        //     if (width > 1000) {
-        //         var altAjuste = height - 98;
-        //         var altNavV = height - 113;
-        //         $('#Ajuste').height(altAjuste);
-        //         $('#navV').height(altNavV);
-        //     }
-        // });
-
-
-        $(document).ready(function() {
-            function ajustarAlturas() {
-                var height = $(window).height();
-                var width = $(window).width();
-
-                if (width > 1000) {
-                    var altAjuste = height - 98;
-                    var altNavV = height - 113;
-                    $('#Ajuste').height(altAjuste);
-                    $('#navV').height(altNavV);
-                }
-            }
-
-            // Ejecuta la función al cargar la página
-            ajustarAlturas();
-
-            // Ejecuta la función cuando cambia el tamaño de la ventana
-            $(window).on('resize', ajustarAlturas);
-        });
-    </script>
 </body>
 
 </html>
